@@ -1,0 +1,32 @@
+*** 06/17/2014 (A. Chang): CM Controllers Not Operating Correctly - Firmware Resets
+
+Description:
+Many Robotis CM controllers (eg. CM-530, CM-2+, CM-5, CM-700) were found, either out-of-the-box or after light use, to be un-functional. Symptoms included LED displays (eg. 'mode' LEDs) not transitioning on button pressed in accordance with manuals. Additionally, the Robotis RoboPlus Manager application could not connect to the controllers despite the device being detected by PC via the USB port.
+
+Solution: 
+In order to reset the controllers (so that controllers could transition to different modes correctly), a firmware reset needed to be applied via the RoboPlus Manager application.
+However, the RoboPlus Manager application could not connect to the controllers, attached to the PC's USB port, due to an FTDI USB-to-serial driver issue. Later versions of the FTDI driver prevent RoboPlus Manager from being able to connect to controllers. 
+
+The following forum post documents the solution - ie. installing an older version of the FTDI driver to PC, whose .inf file has been updated to 'trick' the PC OS into thinking this it is still a later driver:
+http://www.robotis.com/xe/download_en/646927
+
+For convenience, driver file and instructions have been included in same directory as this document: 
+- CDM v2.08.31.zip 
+- FTDI_Driver_Reinstall_Guide.pdf 
+
+
+*** 06/20/2014 (A. Chang): OpenCM IDE Not Compiling Code ('No such file or directory' error)
+
+Description:
+The Linux 64-bit version of the Robotis OpenCM IDE (eg. installation archive: ROBOTIS_OpenCM-v1.0.2-linux64.tgz) installs compiler executables/files that are compiled for 32-bit machines (eg. arm-none-eabi-gcc). When installing and running this IDE on an Ubuntu 64-bit OS, if compilation is attempted, the OpenCM IDE may display an error indicating 'No such file or directory' with respect to some compiler executable (eg. arm-none-eabi-gcc) it is attempting to use. However, an 'ls' of the 'missing' file will indicate that it is present.
+
+Running the 'file' command on the <file> not being 'found' displays:
+$ file arm-none-eabi-gcc
+arm-none-eabi-gcc: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.2.5, stripped
+
+Solution:
+32-bit dynamically-linked executables cannot run on 64-bit machines without the relevant 32-bit shared libraries. Solution on Ubuntu 12.04 64-bit was to install a package that contains many commonly used 32-bit libraries:
+sudo apt-get install ia32-libs
+
+After that, OpenCM IDE was able to successfully compile programs (and I was able to independently run the previously 'not found' file, arm-none-eabi-gcc, from the command line).
+
