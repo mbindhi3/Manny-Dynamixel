@@ -1,0 +1,27 @@
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([11,12],[0,0]',[deg2rad(10),deg2rad(-10)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([11,12],[0,0]',[deg2rad(30),deg2rad(-30)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([11,12],[0,0]',[deg2rad(50),deg2rad(-50)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([11,12],[0,0]',[deg2rad(70),deg2rad(-70)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([11,12],[0,0]',[deg2rad(90),deg2rad(-90)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([11,12],[0,0]',[deg2rad(0),deg2rad(0)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([13,14],[0,0]',[deg2rad(10),deg2rad(-10)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([13,14],[0,0]',[deg2rad(30),deg2rad(-30)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([13,14],[0,0]',[deg2rad(50),deg2rad(-50)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([13,14],[0,0]',[deg2rad(30),deg2rad(-30)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([15,16],[0,0]',[deg2rad(-10),deg2rad(10)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([15,16],[0,0]',[deg2rad(-30),deg2rad(30)]',[pi/6,pi/6]');
+input('Press <Enter> to begin goal position/speed test.\n');
+dxl_io.set_motor_pos_speed([15,16],[0,0]',[deg2rad(-50),deg2rad(50)]',[pi/6,pi/6]');
+
